@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Home from "./pages/Home";
+import Table from "./pages/Table";
+import Call from './pages/Call';
+import Menu from './pages/Menu';
+import {Routes, Route} from "react-router-dom";
 
 function App() {
+
+  const [tableNumber, setTableNumber] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home tableNumber={tableNumber} setTableNumber={setTableNumber}/>} />
+        <Route path="/table/:params" element={<Table tableNumber={tableNumber}/>} />
+        <Route path="/table/:params/call" element={<Call/>} />
+        <Route path="/table/:params/menu" element={<Menu/>} />
+      </Routes>
+    </>
   );
 }
 
