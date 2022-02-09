@@ -1,0 +1,186 @@
+{
+  "menu": [
+    {
+      "nameCategories": "Pizzanesas",
+      "id":1000,
+      "photo": "https://images.deliveryhero.io/image/pedidosya/products/49224445-40d0ab3e-e04f-40f2-b180-f984c2821ea4.jpeg?quality=90&height=96&width=96&webp=1",
+      "products": [
+        {
+          "id": 1001,
+          "title": "Pizzanesa clásica",
+          "description": "",
+          "price": 1530
+        },
+        {
+          "id": 1002,
+          "title": "Pizzanesa muzzarella",
+          "description": "Milanesa de ternera, muzzarella, salsa de tomate, aceitunas verdes y orégano. Con papas fritas",
+          "price": 1890
+        },
+        {
+          "id": 1003,
+          "title": "Pizzanesa fugazzeta con queso",
+          "description": "Cebolla, aceite de oliva, pimienta, orégano y muzzarella. Con papas fritas",
+          "price": 1950
+        }
+      ]
+    },
+    {
+      "nameCategories": "Milanesas",
+      "id":2000,
+        "photo": "https://images.deliveryhero.io/image/pedidosya/products/2741858-146abd8b-16cb-4187-913b-c83298c6ffb0.jpeg?quality=90&height=96&width=96&webp=1",
+        "products": [
+          {
+            "id": 2001,
+            "title": "Milanesa clásica",
+            "description": "Milanesa clásica con papas fritas",
+            "price": 890
+          },
+          {
+            "id": 2002,
+            "title": "Milanesa completa",
+            "description": "Milanesa con papas fritas y 2 huevos fritos",
+            "price": 980
+          },
+          {
+            "id": 2003,
+            "title": "Milanesa napolitana",
+            "description": "Milanesa acompañada de salsa de tomate, rodajas tomate natural, aceitunas verdes y orégano",
+            "price": 990
+          }
+        ]
+    } 
+    ,
+      {      
+        "nameCategories": "Pizzas",
+        "id":3000,
+        "photo": "https://images.deliveryhero.io/image/pedidosya/products/2741896-70c08020-fb50-4f89-b9ca-65489a725d44.jpeg?quality=90&height=96&width=96&webp=1",
+        "products": [
+          {
+            "id": 3001,
+            "title": "Pizza Muzzarella",
+            "description": "Muzzarella, salsa de tomate, aceitunas verdes y orégano",
+            "price": 650
+          },
+          {
+            "id": 3002,
+            "title": "Pizza napolitana",
+            "description": "Muzzarella, salsa de tomate, tomates en rodajas y provenzal",
+            "price": 830
+          },
+          {
+            "id": 3003,
+            "title": "Pizza con jamón y morrones",
+            "description": "Muzzarella, salsa de tomate, aceitunas verdes, jamón y morrones",
+            "price": 890
+          },
+          {
+            "id": 3004,
+            "title": "Pizza cuatro quesos",
+            "description": "Muzzarella, salsa de tomate, gruyere, roquefort y parmesano",
+            "price": 990
+          },
+          {
+            "id": 3005,
+            "title": "Pizza La Farola",
+            "description": "Tomate, muzzarella, jamón cocido, huevo, morrones, aceitunas negras, pálmitos y orégano",
+            "price": 980
+          }
+        ]
+      }
+    ,
+       {
+        "nameCategories": "Empanadas",
+        "id":4000,
+        "photo": "https://images.deliveryhero.io/image/pedidosya/products/2741915-e25880ed-a325-49e2-97e5-e137354fc699.jpeg?quality=90&height=96&width=96&webp=1",
+        "products": [
+          {
+            "id": 4001,
+            "title": "Empanada de carne",
+            "description": "",
+            "price": 185
+          },
+          {
+            "id": 4002,
+            "title": "Empanada de carne picante",
+            "description": "",
+            "price": 185
+          },
+          {
+            "id": 4003,
+            "title": "Empanada de pollo",
+            "description": "",
+            "price": 185
+          },
+          {
+            "id": 4004,
+            "title": "Empanada de jamón y queso",
+            "description": "",
+            "price": 185
+          },
+          {
+            "id": 4005,
+            "title": "Empanada capresse",
+            "description": "",
+            "price": 185
+          },
+          {
+            "id": 4006,
+            "title": "Empanada humita",
+            "description": "",
+            "price": 185
+          },
+          {
+            "id": 4007,
+            "title": "Empanada roquefort",
+            "description": "",
+            "price": 185
+          },
+          {
+            "id": 4008,
+            "title": "Empanada cebolla y queso",
+            "description": "",
+            "price": 185
+          },
+          {
+            "id": 4009,
+            "title": "Empanada verdura con queso",
+            "description": "",
+            "price": 185
+          }
+        ]
+      }
+    ,
+     {
+        "nameCategories": "Carnes",
+        "id":5000,
+        "photo": "https://images.deliveryhero.io/image/pedidosya/products/2742867-3664dfcf-62d1-47c8-8381-52c60f56d81d.jpeg?quality=90&height=96&width=96&webp=1",
+        "products": [
+          {
+            "id": 5001,
+            "title": "Bife de chorizo con papas fritas",
+            "description": "",
+            "price": 1450
+          },
+          {
+            "id": 5002,
+            "title": "Bife de chorizo completo y con huevo frito",
+            "description": "",
+            "price": 1550
+          },
+          {
+            "id": 5003,
+            "title": "Bife de lomo completo con papas fritas y huevo frito",
+            "description": "",
+            "price": 1570
+          },
+          {
+            "id": 5004,
+            "title": "Lomo al champignon con papas españolas",
+            "description": "",
+            "price": 1570
+          }
+        ]
+      }
+    ]
+  }
