@@ -20,17 +20,17 @@ const HeaderMenu = () => {
 
   return (
     <div className={styles.header}>
-    <Swiper spaceBetween={50}
-      slidesPerView={3}
+      <Swiper spaceBetween={50}
+        slidesPerView={3}
       /* onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)} */>
-      {cardsHeaderMenu.map((e) => (
-        <SwiperSlide key={e.id}>
+        {cardsHeaderMenu.map((e) => (
+          <SwiperSlide key={e.id}>
             <Card source={e.photo} description={e.nameCategories} alt={e.nameCategories} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   )
 };
 

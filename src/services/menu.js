@@ -10,4 +10,4 @@ const getAll = async () => {
     }
 }
 
-export {getAll}
+export { getAll }
