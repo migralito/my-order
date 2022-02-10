@@ -1,14 +1,10 @@
-import MenuList from "../components/molecules/MenuList";
-import HeaderMenu from "../components/organims/HeaderMenu";
+import MainMenu from '../components/organims/MainMenu'
 
 
 const Menu = () => {
     return (
         <>
-            <HeaderMenu />
-            <ul>
-                <MenuList />
-            </ul>
+            <MainMenu />
         </>
     )
 };
