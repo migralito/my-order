@@ -1,13 +1,24 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3001/menu'
+const baseUrlCategories = 'http://localhost:3001/categories'
+const baseUrlProducts = 'http://localhost:3001/products'
 
-const getAll = async () => {
+const getAllCategories = async () => {
     try {
-        const response = await axios.get(baseUrl);
+        const response = await axios.get(baseUrlCategories);
         return response.data;
     } catch (err) {
         return alert(err);
     }
 }
 
-export { getAll }
+const getAllProducts= async () => {
+    try {
+        const response = await axios.get(baseUrlProducts);
+        return response.data;
+    } catch (err) {
+        return alert(err);
+    }
+}
+
+
+export { getAllCategories, getAllProducts }

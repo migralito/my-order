@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { getAll } from "../../services/menu";
+import { getAll, getAllCategories } from "../../services/menu";
 import Card from "../molecules/Card";
 import MenuList from "../molecules/MenuList"
 import styles from "./HeaderMenu.module.css"
 
 
-const MainMenu = () => {
+const MainMenu = ({cart, setCart}) => {
 
   const [cardsHeaderMenu, setCardsHeaderMenu] = useState([]);
 
   const [categorySelected, setCategorySelected] = useState("Pizzanesas")
 
   useEffect(() => {
-    getAll()
+    getAllCategories()
       .then((response) => {
         setCardsHeaderMenu(response)
       })
@@ -40,7 +40,7 @@ const MainMenu = () => {
         </Swiper>
       </div>
       <ul>
-        <MenuList category={categorySelected} />
+        <MenuList cart={cart} setCart={setCart} category={categorySelected} />
       </ul>
     </>
   )
