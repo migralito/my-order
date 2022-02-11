@@ -21,4 +21,14 @@ const getAllProducts= async () => {
 }
 
 
-export { getAllCategories, getAllProducts }
+const updateSelectedProduct = async (id, item) => {
+    try {
+        const response = await axios.put(`${baseUrlProducts}/${id}`, item);
+        return response.data;
+    } catch (err) {
+        return alert(err);
+    }
+}
+
+
+export { getAllCategories, getAllProducts, updateSelectedProduct }

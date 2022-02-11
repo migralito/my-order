@@ -20,7 +20,6 @@ const MainMenu = ({ cart, setCart }) => {
       })
   }, []);
 
-
   const handleClick = (category) => () => {
     setCategorySelected(category.nameCategories)
   }

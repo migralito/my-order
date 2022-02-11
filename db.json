@@ -77,7 +77,7 @@
       "title": "Milanesa napolitana",
       "description": "Milanesa acompañada de salsa de tomate, rodajas tomate natural, aceitunas verdes y orégano",
       "price": 990,
-      "selected": false,
+      "selected": true,
       "category": "Milanesas",
       "quantity": 0
     },

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DishFood from "./DishFood";
-import { getAllProducts } from "../../services/menu";
+import { getAllProducts, updateSelectedProduct } from "../../services/menu";
+import Button from "./Button";
 
 const MenuList = ({ category, cart, setCart }) => {
 
@@ -14,20 +15,48 @@ const MenuList = ({ category, cart, setCart }) => {
 
             })
             .catch((error) => alert(error))
-    }, [category])
+    }, [category, cart])
 
 
 
-    const handleClick = (item) => () => {
-        setCart([...cart, item])
+    const handleClickSelected = (id, item) => () => {
+        const productSelected = {
+            ...item,
+            selected: true
+        }
+        updateSelectedProduct(id, productSelected)
+            .then((response) => {
+                setCart([...cart, response])
+            }
+            )
+            .catch((error) => error)
     }
 
-    console.log(cart)
+    const handleClickNotSelected = (id, item) => () => {
+        const productNotSelected = {
+            ...item,
+            selected: false
+        }
+        updateSelectedProduct(id, productNotSelected)
+            .then((response) => {
+                const currentCart = cart.filter((e) => e.id !== response.id ) 
+                setCart(currentCart)
+            }
+            )
+            .catch((error) => error)
+    }
+
 
     return (
         <>
             {foodCategory.map((e) => (
-                <DishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClick(e)} />
+                e.selected === true ?
+                    <div key={e.id}>
+                        <DishFood price={e.price} header={e.title} titleButton={"Agregado"} description={e.description} handleClick={handleClickSelected(e.id, e)} />
+                        <Button titleButton={"Eliminar de la orden"} handleClick={handleClickNotSelected(e.id, e)} />
+                    </div>
+                    :
+                    <DishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClickSelected(e.id, e)} />
             ))}
         </>
     )
