@@ -4,12 +4,12 @@ import Description from '../Description';
 import Button from './Button';
 
 
-const DishFood = ({ price, description, title, handleClick }) => {
+const DishFood = ({ price, description, titleButton, handleClick, header }) => {
     return <li>
-        <Header description={title} />
+        <Header description={header} />
         <Description description={description} />
         <Description description={`$${price}`} />
-        <Button title={title} handleClick={handleClick}/>
+        <Button titleButton={titleButton} handleClick={handleClick} />
     </li>;
 };
 

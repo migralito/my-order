@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { getAll, getAllCategories } from "../../services/menu";
+import { getAllCategories } from "../../services/menu";
 import Card from "../molecules/Card";
 import MenuList from "../molecules/MenuList"
 import styles from "./HeaderMenu.module.css"
 
 
-const MainMenu = ({cart, setCart}) => {
+const MainMenu = ({ cart, setCart }) => {
 
   const [cardsHeaderMenu, setCardsHeaderMenu] = useState([]);
 
@@ -22,7 +22,7 @@ const MainMenu = ({cart, setCart}) => {
 
 
   const handleClick = (category) => () => {
-      setCategorySelected(category.nameCategories)
+    setCategorySelected(category.nameCategories)
   }
 
   return (

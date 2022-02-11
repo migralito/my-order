@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import DishFood from "./DishFood";
-import { getAllCategories, getAllProducts } from "../../services/menu";
+import { getAllProducts } from "../../services/menu";
 
 const MenuList = ({ category, cart, setCart }) => {
 
     const [foodCategory, setFoodCategory] = useState([])
 
-   useEffect(() => {
-        getAllCategories()
+    useEffect(() => {
+        getAllProducts()
             .then((response) => {
-                const categorySelected = response.filter((e) => e.nameCategories === category)
+                const categorySelected = response.filter((e) => e.category === category)
                 return setFoodCategory(categorySelected)
 
             })
@@ -17,22 +17,18 @@ const MenuList = ({ category, cart, setCart }) => {
     }, [category])
 
 
-   useEffect(() => {
-      getAllProducts()
-     .then((response) =>  {
-      const filterProductsSelected =  response.filter((e)=> e.selected === true)
-      return setCart([...cart, ...filterProductsSelected]) 
-    })
-     .catch((error)=> alert(error)) 
-   }, [])
 
-   console.log(foodCategory)
+    const handleClick = (item) => () => {
+        setCart([...cart, item])
+    }
+
+    console.log(cart)
 
     return (
         <>
-            {foodCategory.map((item) => console.log(item))}
-                
-                    {/* <DishFood key={e.id} price={e.price} title={e.title} description={e.description}    handleClick={handleClick(e)} />*/}
+            {foodCategory.map((e) => (
+                <DishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClick(e)} />
+            ))}
         </>
     )
 };
