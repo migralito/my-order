@@ -34,7 +34,7 @@
       "price": 1530,
       "selected": false,
       "category": "Pizzanesas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 1002,
@@ -43,7 +43,7 @@
       "price": 1890,
       "selected": false,
       "category": "Pizzanesas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 1003,
@@ -52,7 +52,7 @@
       "price": 1950,
       "selected": false,
       "category": "Pizzanesas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 2001,
@@ -61,7 +61,7 @@
       "price": 890,
       "selected": false,
       "category": "Milanesas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 2002,
@@ -70,16 +70,16 @@
       "price": 980,
       "selected": false,
       "category": "Milanesas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 2003,
       "title": "Milanesa napolitana",
       "description": "Milanesa acompañada de salsa de tomate, rodajas tomate natural, aceitunas verdes y orégano",
       "price": 990,
-      "selected": true,
+      "selected": false,
       "category": "Milanesas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 3001,
@@ -88,7 +88,7 @@
       "price": 650,
       "selected": false,
       "category": "Pizzas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 3002,
@@ -97,7 +97,7 @@
       "price": 830,
       "selected": false,
       "category": "Pizzas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 3003,
@@ -106,7 +106,7 @@
       "price": 890,
       "selected": false,
       "category": "Pizzas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 3004,
@@ -115,7 +115,7 @@
       "price": 990,
       "selected": false,
       "category": "Pizzas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 3005,
@@ -124,7 +124,7 @@
       "price": 980,
       "selected": false,
       "category": "Pizzas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4001,
@@ -133,7 +133,7 @@
       "price": 185,
       "selected": false,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4002,
@@ -142,7 +142,7 @@
       "price": 185,
       "selected": false,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4003,
@@ -151,7 +151,7 @@
       "price": 185,
       "selected": false,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4004,
@@ -160,7 +160,7 @@
       "price": 185,
       "selected": false,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4005,
@@ -169,7 +169,7 @@
       "selected": false,
       "price": 185,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4006,
@@ -178,7 +178,7 @@
       "price": 185,
       "selected": false,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4007,
@@ -187,7 +187,7 @@
       "price": 185,
       "selected": false,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4008,
@@ -196,7 +196,7 @@
       "price": 185,
       "selected": false,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4009,
@@ -205,7 +205,7 @@
       "price": 185,
       "selected": false,
       "category": "Empanadas",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 5001,
@@ -214,7 +214,7 @@
       "price": 1450,
       "selected": false,
       "category": "Carnes",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 5002,
@@ -223,7 +223,7 @@
       "price": 1550,
       "selected": false,
       "category": "Carnes",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 5003,
@@ -232,7 +232,7 @@
       "price": 1570,
       "selected": false,
       "category": "Carnes",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 5004,
@@ -241,7 +241,7 @@
       "price": 1570,
       "selected": false,
       "category": "Carnes",
-      "quantity": 0
+      "quantity": 1
     }
   ]
 }

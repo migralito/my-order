@@ -52,7 +52,7 @@ const MenuList = ({ category, cart, setCart }) => {
             {foodCategory.map((e) => (
                 e.selected === true ?
                     <div key={e.id}>
-                        <DishFood price={e.price} header={e.title} titleButton={"Agregado"} description={e.description} handleClick={handleClickSelected(e.id, e)} />
+                        <DishFood price={e.price} header={e.title} titleButton={"Agregado"} description={e.description}/>
                         <Button titleButton={"Eliminar de la orden"} handleClick={handleClickNotSelected(e.id, e)} />
                     </div>
                     :
