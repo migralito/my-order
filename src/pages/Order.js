@@ -1,20 +1,34 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { updateSelectedProduct } from "../services/menu";
 
-const Order = ({ cart, setCart, tableNumber }) => {
+const Order = ({ cart, tableNumber }) => {
 
-    const handleChangeQuantity = (quantity) => (e) => {
-        const findProductQuantity = {
+    const idCart = cart.map((e) => {
+        return 1
+    })
+
+
+    const [quantity, setQuantity] = useState({
+        ...idCart
+    })
+
+    console.log(quantity[0])
+    console.log(quantity[1])
+
+    const handleQuantityAdd = (e) => () => {
+        setQuantity({
             ...quantity,
-            quantity: parseInt(e.target.value)
-        }
-        updateSelectedProduct(findProductQuantity.id, findProductQuantity)
-            .then((response) => {
-                const cartFilter = cart.filter((e) => e.id !== response.id)
-                setCart([findProductQuantity, ...cartFilter])
-            }
-            )
+            id_1001: quantity[`id_${e.id}`] + 1
+        })
     }
+
+    const handleQuantitySubtract = (e) => () => {
+        setQuantity({
+            ...quantity,
+            id_1001: quantity[`id_${e.id}`] - 1
+        })
+    }
+
 
     return (
         <>
@@ -25,35 +39,18 @@ const Order = ({ cart, setCart, tableNumber }) => {
                     <div key={e.id}>
                         <h4>{e.title}</h4>
                         <small>{e.description}</small>
-                        <label>Cantidad</label>
-                        {e.quantity === 1 ?
-                            <select onChange={handleChangeQuantity(e)}>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                             </select> : 
-                            <select onChange={handleChangeQuantity(e)}>
-                                <option defaultValue={e.quantity}>{e.quantity}</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                            </select>
+                        <br />
+                        <br />
+                        <small style={{ display: "inline" }}>Cantidad: {`${quantity[`id_${e.id}`]}`} </small>
+                        {quantity[`id_${e.id}`] === 1 ?
+                            <button onClick={handleQuantityAdd(e)}>+</button>
+                            :
+                            <>
+                                <button onClick={handleQuantityAdd(e)}>+</button>
+                                <button onClick={handleQuantitySubtract(e)}>-</button>
+                            </>
                         }
-                        <p>{`$ ${e.quantity * e.price}`}</p>
+                        <p>Total: ${e.price * quantity[`id_${e.id}`]}</p>
                     </div>
                 ))}
             </div>

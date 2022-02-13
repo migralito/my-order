@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import DishFood from "./DishFood";
-import { getAllProducts, updateSelectedProduct } from "../../services/menu";
+import { getAllProducts } from "../../services/menu";
 import Button from "./Button";
 
 const MenuList = ({ category, cart, setCart }) => {
@@ -18,45 +18,28 @@ const MenuList = ({ category, cart, setCart }) => {
     }, [category, cart])
 
 
-
-    const handleClickSelected = (id, item) => () => {
-        const productSelected = {
-            ...item,
-            selected: true
-        }
-        updateSelectedProduct(id, productSelected)
-            .then((response) => {
-                setCart([...cart, response])
-            }
-            )
-            .catch((error) => error)
+    const handleClickSelected = (item) => () => {
+        setCart([...cart, item])
     }
 
-    const handleClickNotSelected = (id, item) => () => {
-        const productNotSelected = {
-            ...item,
-            selected: false
-        }
-        updateSelectedProduct(id, productNotSelected)
-            .then((response) => {
-                const currentCart = cart.filter((e) => e.id !== response.id ) 
-                setCart(currentCart)
-            }
-            )
-            .catch((error) => error)
+
+    const handleClickNotSelected = (item) => () => {
+        const cartCurrent = cart.filter((e) => e.id !== item.id)
+        setCart(cartCurrent)
     }
+
 
 
     return (
         <>
             {foodCategory.map((e) => (
-                e.selected === true ?
+                cart.filter((item) => item.id === e.id).length > 0 ?
                     <div key={e.id}>
-                        <DishFood price={e.price} header={e.title} titleButton={"Agregado"} description={e.description}/>
-                        <Button titleButton={"Eliminar de la orden"} handleClick={handleClickNotSelected(e.id, e)} />
+                        <DishFood price={e.price} header={e.title} titleButton={"Agregado"} description={e.description} />
+                        <Button titleButton={"Eliminar de la orden"} handleClick={handleClickNotSelected(e)} />
                     </div>
                     :
-                    <DishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClickSelected(e.id, e)} />
+                    <DishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClickSelected(e)} />
             ))}
         </>
     )

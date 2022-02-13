@@ -32,216 +32,168 @@
       "title": "Pizzanesa clásica",
       "description": "",
       "price": 1530,
-      "selected": false,
-      "category": "Pizzanesas",
-      "quantity": 1
+      "category": "Pizzanesas"
     },
     {
       "id": 1002,
       "title": "Pizzanesa muzzarella",
       "description": "Milanesa de ternera, muzzarella, salsa de tomate, aceitunas verdes y orégano. Con papas fritas",
       "price": 1890,
-      "selected": false,
-      "category": "Pizzanesas",
-      "quantity": 1
+      "category": "Pizzanesas"
     },
     {
       "id": 1003,
       "title": "Pizzanesa fugazzeta con queso",
       "description": "Cebolla, aceite de oliva, pimienta, orégano y muzzarella. Con papas fritas",
       "price": 1950,
-      "selected": false,
-      "category": "Pizzanesas",
-      "quantity": 1
+      "category": "Pizzanesas"
     },
     {
       "id": 2001,
       "title": "Milanesa clásica",
       "description": "Milanesa clásica con papas fritas",
       "price": 890,
-      "selected": false,
-      "category": "Milanesas",
-      "quantity": 1
+      "category": "Milanesas"
     },
     {
       "id": 2002,
       "title": "Milanesa completa",
       "description": "Milanesa con papas fritas y 2 huevos fritos",
       "price": 980,
-      "selected": false,
-      "category": "Milanesas",
-      "quantity": 1
+      "category": "Milanesas"
     },
     {
       "id": 2003,
       "title": "Milanesa napolitana",
       "description": "Milanesa acompañada de salsa de tomate, rodajas tomate natural, aceitunas verdes y orégano",
       "price": 990,
-      "selected": false,
-      "category": "Milanesas",
-      "quantity": 1
+      "category": "Milanesas"
     },
     {
       "id": 3001,
       "title": "Pizza Muzzarella",
       "description": "Muzzarella, salsa de tomate, aceitunas verdes y orégano",
       "price": 650,
-      "selected": false,
-      "category": "Pizzas",
-      "quantity": 1
+      "category": "Pizzas"
     },
     {
       "id": 3002,
       "title": "Pizza napolitana",
       "description": "Muzzarella, salsa de tomate, tomates en rodajas y provenzal",
       "price": 830,
-      "selected": false,
-      "category": "Pizzas",
-      "quantity": 1
+      "category": "Pizzas"
     },
     {
       "id": 3003,
       "title": "Pizza con jamón y morrones",
       "description": "Muzzarella, salsa de tomate, aceitunas verdes, jamón y morrones",
       "price": 890,
-      "selected": false,
-      "category": "Pizzas",
-      "quantity": 1
+      "category": "Pizzas"
     },
     {
       "id": 3004,
       "title": "Pizza cuatro quesos",
       "description": "Muzzarella, salsa de tomate, gruyere, roquefort y parmesano",
       "price": 990,
-      "selected": false,
-      "category": "Pizzas",
-      "quantity": 1
+      "category": "Pizzas"
     },
     {
       "id": 3005,
       "title": "Pizza La Farola",
       "description": "Tomate, muzzarella, jamón cocido, huevo, morrones, aceitunas negras, pálmitos y orégano",
       "price": 980,
-      "selected": false,
-      "category": "Pizzas",
-      "quantity": 1
+      "category": "Pizzas"
     },
     {
       "id": 4001,
       "title": "Empanada de carne",
       "description": "",
       "price": 185,
-      "selected": false,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 4002,
       "title": "Empanada de carne picante",
       "description": "",
       "price": 185,
-      "selected": false,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 4003,
       "title": "Empanada de pollo",
       "description": "",
       "price": 185,
-      "selected": false,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 4004,
       "title": "Empanada de jamón y queso",
       "description": "",
       "price": 185,
-      "selected": false,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 4005,
       "title": "Empanada capresse",
       "description": "",
-      "selected": false,
       "price": 185,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 4006,
       "title": "Empanada humita",
       "description": "",
       "price": 185,
-      "selected": false,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 4007,
       "title": "Empanada roquefort",
       "description": "",
       "price": 185,
-      "selected": false,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 4008,
       "title": "Empanada cebolla y queso",
       "description": "",
       "price": 185,
-      "selected": false,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 4009,
       "title": "Empanada verdura con queso",
       "description": "",
       "price": 185,
-      "selected": false,
-      "category": "Empanadas",
-      "quantity": 1
+      "category": "Empanadas"
     },
     {
       "id": 5001,
       "title": "Bife de chorizo con papas fritas",
       "description": "",
       "price": 1450,
-      "selected": false,
-      "category": "Carnes",
-      "quantity": 1
+      "category": "Carnes"
     },
     {
       "id": 5002,
       "title": "Bife de chorizo completo y con huevo frito",
       "description": "",
       "price": 1550,
-      "selected": false,
-      "category": "Carnes",
-      "quantity": 1
+      "category": "Carnes"
     },
     {
       "id": 5003,
       "title": "Bife de lomo completo con papas fritas y huevo frito",
       "description": "",
       "price": 1570,
-      "selected": false,
-      "category": "Carnes",
-      "quantity": 1
+      "category": "Carnes"
     },
     {
       "id": 5004,
       "title": "Lomo al champignon con papas españolas",
       "description": "",
       "price": 1570,
-      "selected": false,
-      "category": "Carnes",
-      "quantity": 1
+      "category": "Carnes"
     }
   ]
 }
