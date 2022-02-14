@@ -23,7 +23,7 @@ function App() {
         <Route path="/table/:params" element={<Table tableNumber={tableNumber} />} />
         <Route path="/table/:params/call" element={<Call tableNumber={tableNumber} />} />
         <Route path="/table/:params/menu" element={<Menu tableNumber={tableNumber} cart={cart} setCart={setCart} />} />
-        <Route path="/table/:params/menu/order" element={<Order cart={cart} setCart={setCart} tableNumber={tableNumber} />} />
+        <Route path="/table/:params/menu/order" element={<Order cart={cart} tableNumber={tableNumber} />} />
       </Routes>
     </>
   );
