@@ -1,8 +1,25 @@
-import Button from "../molecules/Button"
+import Button from "../Button";
 import Description from "../Description"
 import Header from "../Header";
 
-const CardOrder = ({handleQuantityAdd, handleQuantitySubtract ,e , i, quantity}) => {
+const CardOrder = ({quantity, e, i, setQuantity}) => {
+
+    const handleQuantityAdd = (i) => () => {
+        const quantityAdd = [...quantity]
+        quantityAdd[i].quantity = quantityAdd[i].quantity + 1
+        setQuantity(
+            quantityAdd
+        )
+    }
+
+    const handleQuantitySubtract = (i) => () => {
+        const quantitySubtract = [...quantity]
+        quantitySubtract[i].quantity = quantitySubtract[i].quantity - 1
+        setQuantity(
+            quantitySubtract
+        )
+    }
+
 
     return (
         <>
