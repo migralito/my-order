@@ -3,7 +3,9 @@ import DishFood from "./DishFood";
 import { getAllProducts } from "../../services/menu";
 import Button from "./Button";
 
-const MenuList = ({ category, cart, setCart }) => {
+const MenuList = ({ category, cart, handleClickSelected, handleClickNotSelected }) => {
+
+    console.log(category)
 
     const [foodCategory, setFoodCategory] = useState([])
 
@@ -12,23 +14,9 @@ const MenuList = ({ category, cart, setCart }) => {
             .then((response) => {
                 const categorySelected = response.filter((e) => e.category === category)
                 return setFoodCategory(categorySelected)
-
             })
             .catch((error) => alert(error))
     }, [category, cart])
-
-
-    const handleClickSelected = (item) => () => {
-        setCart([...cart, item])
-    }
-
-
-    const handleClickNotSelected = (item) => () => {
-        const cartCurrent = cart.filter((e) => e.id !== item.id)
-        setCart(cartCurrent)
-    }
-
-
 
     return (
         <>

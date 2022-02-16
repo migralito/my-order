@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import Welcome from "./pages/Welcome";
 import Home from "./pages/Home";
-import Table from "./pages/Table";
 import Call from './pages/Call';
 import Menu from './pages/Menu';
 import Order from './pages/Order';
@@ -12,15 +12,11 @@ function App() {
 
   const [cart, setCart] = useState([])
 
-  console.log(tableNumber)
-  console.log(cart)
-
-
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home tableNumber={tableNumber} setTableNumber={setTableNumber} />} />
-        <Route path="/table/:params" element={<Table tableNumber={tableNumber} />} />
+        <Route path="/" element={<Welcome tableNumber={tableNumber} setTableNumber={setTableNumber} />} />
+        <Route path="/table/:params" element={<Home tableNumber={tableNumber} />} />
         <Route path="/table/:params/call" element={<Call tableNumber={tableNumber} />} />
         <Route path="/table/:params/menu" element={<Menu tableNumber={tableNumber} cart={cart} setCart={setCart} />} />
         <Route path="/table/:params/menu/order" element={<Order cart={cart} tableNumber={tableNumber} />} />

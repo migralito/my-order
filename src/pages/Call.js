@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import Description from '../components/Description';
 
 const Call = ({ tableNumber }) => {
     return (
         <>
             {`Mesa Nro: ${tableNumber}`}
-            <h1>Me llamaste</h1>
+            <Description description={"Me llamaste"} />
             <Link to={`/table/${tableNumber}`}>Volver a home</Link>
         </>
     )
