@@ -1,7 +1,6 @@
-import React from 'react';
 
-const Header = ({ description }) => {
-    return <h3>{description}</h3>;
+const Header = ({ description, clases }) => {
+    return <h3 className={clases}>{description}</h3>;
 };
 
 export default Header;

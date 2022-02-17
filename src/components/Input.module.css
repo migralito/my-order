@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.inputLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input {
+    width: 15%;
+    padding: 5px;
+    margin: -5px 10px 0px 0px;
+    text-align: center;
+    border: solid 1px  #ff0000;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.enter {
+    background-color: #ff0000;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #fff;
+    margin-top: -5px;
+}
+
+.enter:hover {
+    cursor: pointer;
+    background-color: #da0101;
+}

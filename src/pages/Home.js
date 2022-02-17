@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
-import Description from "../components/Description";
 import CardCategorie from "../components/molecules/CardCategorie";
+import HeaderBrandTable from "../components/molecules/HeaderBrandTable";
+import styles from './Home.module.css'
+import camarero from '../images/camarero.jpg'
+import menu from '../images/menu.jpg'
 
 const Home = ({ tableNumber }) => {
-    return <>
-        <Description description={`Mesa N° ${tableNumber}`} />
-        <Link to={`/table/${tableNumber}/call`}>
-            <CardCategorie source={'https://d2pur3iezf4d1j.cloudfront.net/images/1f0a654aa7c65395487d98fd4784c718'} alternativo={'llamar-camarera/o'} />
-        </Link>
-        <Link to={`/table/${tableNumber}/menu`}>
-            <CardCategorie source={'https://enlacocina.b-cdn.net/wp-content/uploads/2018/01/men%C3%BA-1024x770.png'} alternativo={'ver-menu'} />
-        </Link>
-    </>
+    return <div className={styles.home}>
+        <HeaderBrandTable tableNumber={tableNumber} />
+        <div className={styles.container}>
+            <Link to={`/table/${tableNumber}/call`} className={styles.link}>
+                <CardCategorie source={camarero} clases={styles.card} alternativo={'llamar-camarera/o'} />
+            </Link>
+            <Link to={`/table/${tableNumber}/menu`} className={styles.link}>
+                <CardCategorie source={menu} clases={styles.card} alternativo={'ver-menu'} />
+            </Link>
+        </div>
+    </div>
 };
 
 export default Home;

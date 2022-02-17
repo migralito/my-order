@@ -2,7 +2,7 @@
 import { useState } from "react";
 import CardsCategories from '../components/molecules/CardsCategories'
 import CardsDishFood from "../components/molecules/CardsDishFood";
-import Header from "../components/Header"
+import HeaderBrandTable from "../components/molecules/HeaderBrandTable";
 import { Link } from 'react-router-dom'
 
 const Menu = ({ tableNumber, cart, setCart }) => {
@@ -16,13 +16,13 @@ const Menu = ({ tableNumber, cart, setCart }) => {
 
     return (
         <>
-            <Header description={`Mesa N°: ${tableNumber}`}/>
-            {cart.length === 0 ? "" : <Link to={`/table/${tableNumber}/menu/order`}>Ver mi orden</Link>}
+            <HeaderBrandTable tableNumber={tableNumber}/>
             <CardsCategories handleClick={handleClick} />
-            <ul>
             <CardsDishFood cart={cart} setCart={setCart} category={categorySelected}/>
+            <div>
+            {cart.length === 0 ? "" : <Link to={`/table/${tableNumber}/menu/order`}>Ver mi orden</Link>}
             <Link to={`/table/${tableNumber}`}>Volver a home</Link>
-            </ul>
+            </div>
         </>
     )
 };

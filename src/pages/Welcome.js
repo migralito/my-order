@@ -1,16 +1,17 @@
-import Description from '../components/Description';
+import Header from '../components/Header';
 import Input from '../components/Input';
-import { Link } from "react-router-dom";
+import Brand from '../components/Brand';
+import styles from './Welcome.module.css'
+
 
 
 const Welcome = ({ tableNumber, setTableNumber }) => {
   return (
-    <>
-      <Description description={'Bienvenido a La Farola Caballito'} />
-      <Description description={'Por favor ingresá tu número de mesa'} />
-      <Input value={tableNumber} setTableNumber={setTableNumber} />
-      <Link to={`table/${tableNumber}`}>Ingresar</Link>
-    </>
+    <div className={styles.welcome}>
+      <Header description={'Bienvenidos...'} clases={styles.header}/>
+      <Brand clases={styles.brand} />
+      <Input tableNumber={tableNumber} setTableNumber={setTableNumber} />
+    </div>
   )
 };
 

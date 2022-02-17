@@ -30,11 +30,11 @@ const CardsDishFood = ({ category, cart, setCart }) => {
         <>
             {foodCategory.map((e) => (
                 cart.filter((item) => item.id === e.id).length > 0 ?
-                    <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregado"} description={e.description} handleClick={handleClickSelected(e)}>
+                    <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregado"} description={e.description} handleClick={handleClickSelected(e)} source={e.photo}>
                         <Button titleButton={"Eliminar de la orden"} handleClick={handleClickNotSelected(e)} />
                     </CardDishFood>
                     :
-                    <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClickSelected(e)} />
+                    <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClickSelected(e)} source={e.photo}/>
             ))}
         </>
     )

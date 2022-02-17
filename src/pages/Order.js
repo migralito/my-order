@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Header from "../components/Header"
 import CardsOrder from "../components/molecules/CardsOrder"
+import HeaderBrandTable from "../components/molecules/HeaderBrandTable"
 import { Link } from "react-router-dom"
 
 const Order = ({ cart, tableNumber }) => {
@@ -15,7 +16,7 @@ const Order = ({ cart, tableNumber }) => {
 
     return (
         <>
-            <Header description={`Mesa N°: ${tableNumber}`} />
+            <HeaderBrandTable tableNumber={tableNumber}/>
             <Header description={"Mi orden"} />
             <CardsOrder quantity={quantity} setQuantity={setQuantity} cart={cart}/>
             <Header description={`Total de la orden: $${total}`} />
