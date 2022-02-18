@@ -37,3 +37,8 @@
     cursor: pointer;
     background-color: #da0101;
 }
+
+.error {
+    color: #da0101;
+    font-size: 12px;
+}
