@@ -14,7 +14,7 @@ const Input = ({ tableNumber, setTableNumber }) => {
             <Description description={'Por favor ingresá tu número de mesa.'} />
             <div className={styles.inputLink}>
                 <input onChange={handleClick} value={tableNumber} placeholder={"N° Mesa"} className={styles.input} />
-                {parseInt(tableNumber) < 50 || tableNumber === '' ?
+                {parseInt(tableNumber) < 150 || tableNumber === '' ?
                     <Link to={`table/${tableNumber}`} className={styles.enter}>Entrar</Link> :
                     <Description description={'Debe escribir un número de mesa existente.'} clases={styles.error} />
                 }
