@@ -17,12 +17,12 @@ const Menu = ({ tableNumber, cart, setCart }) => {
 
     return (
         <>
-            <HeaderBrandTable tableNumber={tableNumber}/>
+            <HeaderBrandTable tableNumber={tableNumber} />
             <CardsCategories handleClick={handleClick} category={categorySelected} />
-            <CardsDishFood cart={cart} setCart={setCart} category={categorySelected}/>
+            <CardsDishFood cart={cart} setCart={setCart} category={categorySelected} />
             <div>
-            {cart.length === 0 ? "" : <Link to={`/table/${tableNumber}/menu/order`}>Ver mi orden</Link>}
-            <Link to={`/table/${tableNumber}`}>Volver a home</Link>
+                {cart.length === 0 ? "" : <Link to={`/table/${tableNumber}/menu/order`}>Ver mi orden</Link>}
+                <Link to={`/table/${tableNumber}`}>Volver a home</Link>
             </div>
         </>
     )

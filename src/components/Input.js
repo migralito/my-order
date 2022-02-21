@@ -9,7 +9,6 @@ const Input = ({ tableNumber, setTableNumber }) => {
         setTableNumber(e.target.value)
     }
 
-    console.log(tableNumber)
 
     if (tableNumber === "") {
         return (

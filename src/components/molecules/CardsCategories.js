@@ -11,12 +11,11 @@ const CardsCategories = ({ handleClick, category }) => {
 
   const [cardsHeaderMenu, setCardsHeaderMenu] = useState([]);
 
-
   useEffect(() => {
-      const categories = getAllCategories()
-          setCardsHeaderMenu(categories)
+    const categories = getAllCategories()
+    setCardsHeaderMenu(categories)
   }, []);
-  
+
 
   return (
     <>
@@ -25,7 +24,10 @@ const CardsCategories = ({ handleClick, category }) => {
           slidesPerView={3}>
           {cardsHeaderMenu.map((e) => (
             <SwiperSlide key={e.id}>
-              <CardCategorie source={e.photo} handleClick={handleClick(e)} description={e.nameCategories} alt={e.nameCategories} />
+              {e.nameCategories === category ?
+                <CardCategorie source={e.photo} handleClick={handleClick(e)} description={e.nameCategories} alt={e.nameCategories} clases={styles.selected} /> :
+                <CardCategorie source={e.photo} handleClick={handleClick(e)} description={e.nameCategories} alt={e.nameCategories} clases={styles.notSelected} />
+              }
             </SwiperSlide>
           ))}
         </Swiper>
