@@ -7,9 +7,10 @@ import CardCategorie from "./CardCategorie";
 import styles from "./CardsCategories.module.css"
 
 
-const CardsCategories = ({ handleClick }) => {
+const CardsCategories = ({ handleClick, category }) => {
 
   const [cardsHeaderMenu, setCardsHeaderMenu] = useState([]);
+
 
   useEffect(() => {
       const categories = getAllCategories()

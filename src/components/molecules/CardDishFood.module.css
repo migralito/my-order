@@ -40,8 +40,16 @@
     font-size: 12px;
 }
 
-.buttonAdd {
-    background-color: rgb(87, 238, 132);
+.aggregate {
+    background-color: rgb(209, 209, 209);
+    color: #fff;
+    border: none;
+    padding: 5px;
+}
+
+
+.notAgreggate {
+    background-color: rgb(37, 204, 87);
     color: #fff;
     border: none;
     padding: 5px;
