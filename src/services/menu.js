@@ -33,7 +33,7 @@ let menu = {
         "title": "Pizzanesa clásica",
         "description": "",
         "price": 1530,
-        "photo": "https://images.deliveryhero.io/image/pedidosya/products/49224445-40d0ab3e-e04f-40f2-b180-f984c2821ea4.jpeg?quality=90&width=864&webp=1",
+        "photo": "https://images.deliveryhero.io/image/pedidosya/products/49224445-40d0ab3e-e04f-40f2-b180-f984c2821ea4.jpeg?quality=90&height=96&width=96&webp=1",
         "category": "Pizzanesas"
       },
       {
@@ -222,6 +222,7 @@ let menu = {
       }
     ]
   }
+
 
 
 const getAllCategories = () => {

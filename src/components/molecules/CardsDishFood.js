@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { getAllProducts } from "../../services/menu";
-import Button from "../Button";
+import Header from "../Header";
+import { FaTrashAlt } from "react-icons/fa";
 import CardDishFood from "./CardDishFood"
+import styles from "./CardsDishFood.module.css"
+
 
 const CardsDishFood = ({ category, cart, setCart }) => {
 
@@ -24,16 +27,17 @@ const CardsDishFood = ({ category, cart, setCart }) => {
     }
 
     return (
-        <>
+        <div className={styles.container}>
+            <Header description={category} clases={styles.header}/>
             {foodCategory.map((e) => (
                 cart.filter((item) => item.id === e.id).length > 0 ?
                     <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregado"} description={e.description} handleClick={handleClickSelected(e)} source={e.photo}>
-                        <Button titleButton={"Eliminar de la orden"} handleClick={handleClickNotSelected(e)} />
+                        <FaTrashAlt onClick={handleClickNotSelected(e)} className={styles.buttonRemove}/>
                     </CardDishFood>
                     :
                     <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClickSelected(e)} source={e.photo} />
             ))}
-        </>
+        </div>
     )
 };
 
