@@ -9,6 +9,8 @@ const Input = ({ tableNumber, setTableNumber }) => {
         setTableNumber(e.target.value)
     }
 
+    console.log(tableNumber)
+
     if (tableNumber === "") {
         return (
             <div className={styles.container}>
@@ -19,7 +21,7 @@ const Input = ({ tableNumber, setTableNumber }) => {
                 </div>
             </div>
         )
-    } else if (parseInt(tableNumber) > 50 || isNaN(parseInt(tableNumber))) {
+    } else if (parseInt(tableNumber) > 50 || isNaN(parseInt(tableNumber)) || parseInt(tableNumber[0]) === 0) {
         return (
             <div className={styles.container}>
                 <Description description={'Por favor ingresá tu número de mesa.'} />
