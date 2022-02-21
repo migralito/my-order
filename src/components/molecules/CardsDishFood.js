@@ -8,12 +8,9 @@ const CardsDishFood = ({ category, cart, setCart }) => {
     const [foodCategory, setFoodCategory] = useState([])
 
     useEffect(() => {
-        getAllProducts()
-            .then((response) => {
-                const categorySelected = response.filter((e) => e.category === category)
-                return setFoodCategory(categorySelected)
-            })
-            .catch((error) => alert(error))
+        const allProducts = getAllProducts()
+        const categorySelected = allProducts.filter((e) => e.category === category)
+        return setFoodCategory(categorySelected)
     }, [category])
 
 
@@ -34,7 +31,7 @@ const CardsDishFood = ({ category, cart, setCart }) => {
                         <Button titleButton={"Eliminar de la orden"} handleClick={handleClickNotSelected(e)} />
                     </CardDishFood>
                     :
-                    <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClickSelected(e)} source={e.photo}/>
+                    <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregar a la orden"} description={e.description} handleClick={handleClickSelected(e)} source={e.photo} />
             ))}
         </>
     )

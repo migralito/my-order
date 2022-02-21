@@ -12,10 +12,8 @@ const CardsCategories = ({ handleClick }) => {
   const [cardsHeaderMenu, setCardsHeaderMenu] = useState([]);
 
   useEffect(() => {
-      getAllCategories()
-          .then((response) => {
-              setCardsHeaderMenu(response)
-          })
+      const categories = getAllCategories()
+          setCardsHeaderMenu(categories)
   }, []);
   
 
