@@ -38,6 +38,14 @@
     background-color: #da0101;
 }
 
+.inputLinkError {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .error {
     color: #da0101;
     font-size: 12px;

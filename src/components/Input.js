@@ -23,7 +23,7 @@ const Input = ({ tableNumber, setTableNumber }) => {
         return (
             <div className={styles.container}>
                 <Description description={'Por favor ingresá tu número de mesa.'} />
-                <div className={styles.inputLink}>
+                <div className={styles.inputLinkError}>
                     <input onChange={handleClick} value={tableNumber} placeholder={"N° Mesa"} className={styles.input} />
                     <Description description={'Debe escribir un número de mesa existente.'} clases={styles.error} />
                 </div>
