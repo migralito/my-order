@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Header from "../components/Header"
 import CardsOrder from "../components/molecules/CardsOrder"
 import HeaderBrandTable from "../components/molecules/HeaderBrandTable"
 import { Link } from "react-router-dom"
@@ -17,9 +16,9 @@ const Order = ({ cart, tableNumber }) => {
     return (
         <>
             <HeaderBrandTable tableNumber={tableNumber}/>
-            <Header description={"Mi orden"} />
+            <h3>Mi orden</h3>
             <CardsOrder quantity={quantity} setQuantity={setQuantity} cart={cart}/>
-            <Header description={`Total de la orden: $${total}`} />
+            <h3>{`Total de la orden: $${total}`}</h3>
             <Link to={`/table/${tableNumber}/menu`}>Volver a seleccionar el menú</Link>
         </>
     )

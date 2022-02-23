@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getAllProducts } from "../../services/menu";
-import Header from "../Header";
 import { FaTrashAlt } from "react-icons/fa";
 import CardDishFood from "./CardDishFood"
 import styles from "./CardsDishFood.module.css"
@@ -28,7 +27,7 @@ const CardsDishFood = ({ category, cart, setCart }) => {
 
     return (
         <div className={styles.container}>
-            <Header description={category} clases={styles.header}/>
+            <h3 className={styles.header}>{category}</h3> 
             {foodCategory.map((e) => (
                 cart.filter((item) => item.id === e.id).length > 0 ?
                     <CardDishFood key={e.id} price={e.price} header={e.title} titleButton={"Agregado"} description={e.description} handleClick={handleClickSelected(e)} source={e.photo}>

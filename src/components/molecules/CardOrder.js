@@ -1,6 +1,5 @@
 import Button from "../Button";
 import Description from "../Description"
-import Header from "../Header";
 
 const CardOrder = ({quantity, e, i, setQuantity}) => {
 
@@ -23,7 +22,7 @@ const CardOrder = ({quantity, e, i, setQuantity}) => {
 
     return (
         <>
-            <Header description={e.title} />
+            <h3>{e.title}</h3>
             <Description description={e.description} />
             <Description description={`Cantidad: ${quantity[i].quantity}`} />
             {quantity[i].quantity === 1 ?
@@ -34,7 +33,7 @@ const CardOrder = ({quantity, e, i, setQuantity}) => {
                     <Button handleClick={handleQuantitySubtract(i)} titleButton={"-"} />
                 </>
             }
-            <Header description={`Total: $${e.price * quantity[i].quantity}`} />
+            <h4>{`Total: $${e.price * quantity[i].quantity}`}</h4>
         </>
         )
 };
