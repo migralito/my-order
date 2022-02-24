@@ -16,7 +16,6 @@ const Order = ({ cart, tableNumber }) => {
     return (
         <>
             <HeaderBrandTable tableNumber={tableNumber}/>
-            <h3>Mi orden</h3>
             <CardsOrder quantity={quantity} setQuantity={setQuantity} cart={cart}/>
             <h3>{`Total de la orden: $${total}`}</h3>
             <Link to={`/table/${tableNumber}/menu`}>Volver a seleccionar el menú</Link>
