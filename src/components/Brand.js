@@ -2,11 +2,10 @@
 import brand from '../images/brand.jpg'
 
 
-const Brand = ({children, clases}) => {
-    return(
+const Brand = ({ clases }) => {
+    return (
         <>
-         <img src={brand} alt={'brand'} className={clases}/>
-         {children}
+            <img src={brand} alt={'brand'} className={clases} />
         </>
     )
 };

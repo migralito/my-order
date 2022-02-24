@@ -1,7 +1,4 @@
-import Button from "../Button";
-import Description from "../Description"
-
-const CardOrder = ({quantity, e, i, setQuantity}) => {
+const CardOrder = ({ quantity, e, i, setQuantity }) => {
 
     const handleQuantityAdd = (i) => () => {
         const quantityAdd = [...quantity]
@@ -23,19 +20,19 @@ const CardOrder = ({quantity, e, i, setQuantity}) => {
     return (
         <>
             <h3>{e.title}</h3>
-            <Description description={e.description} />
-            <Description description={`Cantidad: ${quantity[i].quantity}`} />
+            <p>{e.description}</p>
+            <p>{`Cantidad: ${quantity[i].quantity}`}</p>
             {quantity[i].quantity === 1 ?
-                <Button handleClick={handleQuantityAdd(i)} titleButton={"+"} />
+                <button onClick={handleQuantityAdd(i)}>+</button>
                 :
                 <>
-                    <Button handleClick={handleQuantityAdd(i)} titleButton={"+"} />
-                    <Button handleClick={handleQuantitySubtract(i)} titleButton={"-"} />
+                    <button onClick={handleQuantityAdd(i)}>+</button>
+                    <button onClick={handleQuantitySubtract(i)}>-</button>
                 </>
             }
             <h4>{`Total: $${e.price * quantity[i].quantity}`}</h4>
         </>
-        )
+    )
 };
 
 export default CardOrder;
