@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Welcome from "./pages/Welcome";
 import Home from "./pages/Home";
-import Call from './pages/Call';
 import Menu from './pages/Menu';
 import Order from './pages/Order';
 import { Routes, Route } from "react-router-dom";
@@ -18,7 +17,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome tableNumber={tableNumber} setTableNumber={setTableNumber} />} />
         <Route path="/table/:params" element={<Home tableNumber={tableNumber} />} />
-        <Route path="/table/:params/call" element={<Call tableNumber={tableNumber} />} />
         <Route path="/table/:params/menu" element={<Menu tableNumber={tableNumber} cart={cart} setCart={setCart} />} />
         <Route path="/table/:params/menu/order" element={<Order cart={cart} tableNumber={tableNumber} />} />
       </Routes>

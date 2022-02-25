@@ -2,6 +2,7 @@ import { useState } from "react"
 import CardsOrder from "../components/molecules/CardsOrder"
 import HeaderBrandTable from "../components/molecules/HeaderBrandTable"
 import { Link } from "react-router-dom"
+import styles from "./Order.module.css"
 
 const Order = ({ cart, tableNumber }) => {
 
@@ -15,10 +16,15 @@ const Order = ({ cart, tableNumber }) => {
 
     return (
         <>
-            <HeaderBrandTable tableNumber={tableNumber}/>
-            <CardsOrder quantity={quantity} setQuantity={setQuantity} cart={cart}/>
-            <h3>{`Total de la orden: $${total}`}</h3>
-            <Link to={`/table/${tableNumber}/menu`}>Volver a seleccionar el menú</Link>
+            <HeaderBrandTable tableNumber={tableNumber} />
+            <CardsOrder quantity={quantity} setQuantity={setQuantity} cart={cart} />
+            <div className={styles.container}>
+                <div className={styles.containerTotal}>
+                    <h3 className={styles.confirm}>Confirmar Orden</h3>
+                    <p className={styles.total}>{`Total: $${total}`}</p>
+                </div>
+                <Link to={`/table/${tableNumber}/menu`} className={styles.back}>Volver a seleccionar el menú</Link>
+            </div>
         </>
     )
 }
