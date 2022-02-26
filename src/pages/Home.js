@@ -20,9 +20,9 @@ const Home = ({ tableNumber }) => {
         <div className={styles.home}>
             <HeaderBrandTable tableNumber={tableNumber} />
             <div className={styles.container}>
-                {call === false ?  <p onClick={handleCall} className={styles.call}>Llamar camarera/o</p> :
+                {call === false ? <p onClick={handleCall} className={styles.call}>Llamar camarera/o</p> :
                     <div className={styles.notCallContainer}>
-                        <p className={styles.notCall} >Su camarera/o se acercará a su mesa</p>
+                        <p className={styles.notCall} >Su camarera/o se acercará a su mesa.</p>
                         <button onClick={handleCancelCall} className={styles.call} >Cancelar llamado</button>
                     </div>
                 }
